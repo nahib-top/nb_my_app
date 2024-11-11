@@ -1,2 +1,2 @@
 # nb_my_app
-springboot 联系项目
+springboot 练习项目
