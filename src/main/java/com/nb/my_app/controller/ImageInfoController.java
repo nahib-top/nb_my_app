@@ -30,7 +30,7 @@ public class ImageInfoController {
 
     @PostMapping("/upload")
     public String handleFileUpload(@RequestParam("file") MultipartFile file) throws IOException {
-        String message = "";
+        String message;
         try {
             String uploadDir = "D:\\DataFile\\javaFile\\nb_project\\my_app\\src\\main\\resources\\file\\";
             File uploadedFile = new File(uploadDir + file.getOriginalFilename());
@@ -39,7 +39,6 @@ public class ImageInfoController {
             logger.info(message);
             return "upload";
         } catch (IOException e) {
-            e.printStackTrace();
             message = "上传失败：" + e.getMessage();
             logger.error(message);
             return "upload";
